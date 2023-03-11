@@ -119,12 +119,6 @@
     <div class="container slider">
       <h1>Chi mi ha scelto</h1>
       <div class="slider__container" data-multislide="true" data-step="4">
-        <button class="slider__control prev">
-          <div class="chevron left"></div>
-        </button>
-        <button class="slider__control next">
-          <div class="chevron right"></div>
-        </button>
         <div class="slider__item">
           <img src="https://picsum.photos/id/521/700/700" alt="" width="100%">
         </div>
@@ -204,14 +198,16 @@
         document.body.classList.remove('menu-open')
       })
       const sliders = [...document.querySelectorAll('.slider__container')];
-      const sliderControlPrev = [...document.querySelectorAll('.slider__control.prev')];
-      const sliderControlNext = [...document.querySelectorAll('.slider__control.next')];
 
+      
       sliders.forEach((slider, i) => {
-        let isSlide = false;
+        let isSlide = false, 
+          prevPageX,
+          prevScrollLeft,
+          positionDiff;
         const sliderItem = slider.querySelector(".slider__item");
         var isMultiSlide = slider.dataset.multislide;
-        sliderControlPrev[i].addEventListener("click", function () {
+        function goPreviousSlide(){
           if (isSlide) return;
           isSlide = true;
           let slideWidth = isMultiSlide ? slider.clientWidth : sliderItem.clientWidth;
@@ -219,28 +215,43 @@
           setTimeout(() => {
             isSlide = false;
           }, 500);
-        });
-        sliderControlNext[i].addEventListener("click", function () {
+        }
+        function goNextSlide(){
           if (isSlide) return;
           isSlide = true;
-          let slideWidth = isMultiSlide ? slider.clientWidth : sliderItem.clientWidth;
+          if( !slideToFirst()) {
+            let slideWidth = isMultiSlide ? slider.clientWidth : sliderItem.clientWidth;
           slider.scrollLeft += slideWidth;
+          }
           setTimeout(() => {
             isSlide = false;
           }, 500);
-        });
+        }
         function autoSlide() {
           if (slider.scrollLeft - (slider.scrollWidth - slider.clientWidth) > -1 || slider.scrollLeft <= 0) return;
           positionDiff = Math.abs(positionDiff);
           let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
           let valDifference = slideWidth - positionDiff;
           if (slider.scrollLeft > prevScrollLeft) {
-            return slider.scrollLeft += positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
+            // return slider.scrollLeft += positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
           }
           slider.scrollLeft -= positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
         }
+        
         addEventListener("resize", autoSlide);
+        setInterval(() => {
+          if(!slideToFirst()) goNextSlide();
+        }, 3000);
+        function slideToFirst(){
+          let slideWidth = isMultiSlide ? slider.clientWidth : sliderItem.clientWidth;
+          if (slider.scrollLeft - (slider.scrollWidth - slideWidth) > -2) {
+            slider.scrollLeft = 0;
+            return true;
+          }
+          return false;
+        }
       })
+      
     </script>
   </body>
 
