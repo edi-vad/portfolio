@@ -1,0 +1,73 @@
+form{
+    padding-top: 10px;
+}
+.form__container{
+    
+    width: 100%;
+
+   
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 20px;
+    color: var(--bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+.form__container h1{
+    padding-left: 10px;
+}
+.flex__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.form__group{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.form__group input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: solid 1px #d5d5d5;
+    
+}
+.form__group textarea{
+    padding: 5 10px;
+    border-radius: 5px;
+    border: solid 1px #d5d5d5;
+}
+.form__group button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(69, 123, 157, .8);
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid rgba(69, 123, 157, .8);
+    transition: all .2s ease-in;
+}
+.form__group button:hover{
+    background-color: rgba(69, 123, 157, 1);
+}
+.form__info{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    color:  #457B9D;
+}
+.form__info label{
+    padding-left: 10px;
+}
+
+.form__group:nth-child(4){
+    width: 100%;
+}
+@media (max-width: 40rem){
+    .form__group{
+        width: 100%;
+    }
+}
+

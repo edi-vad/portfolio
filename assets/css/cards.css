@@ -1,0 +1,139 @@
+
+.container__flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 70px;
+    height: auto;
+    background-color: var(--main-color);
+}
+.column {
+    display: flex;
+    flex-basis: 32%;
+    height: 140vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card{
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    height: 33%;
+    border-radius: 2%;
+    overflow: hidden;
+    background-color:  #457B9D;
+    display: flex;
+    position: relative;
+    
+}
+.card__image{
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: all .2s ease-out;
+}
+.card:hover .card__image{
+    height: 100%;
+}
+.card::before{
+    background-color: rgba(0, 0, 0, .1);
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    z-index: 2;
+    content: "";
+    transition: all .2s ease-out;
+}
+.card:hover::before{
+    background-color:  rgba(69, 123, 157, .5);
+    height: 100%;
+}
+
+.card__content{
+    align-self: flex-end;
+    
+    width: 100%;
+    padding: 5px 15px;
+    position: relative;
+    color: var(--main-color);
+    z-index: 3;
+    background-color:#457B9D;
+    font-size: .8rem;
+}
+.card:hover .card__content{
+    background-color:  rgba(69, 123, 157, 0);
+}
+
+
+
+.card--longer{
+    height: 80vh;
+}
+.image--flowers {
+    background-image: url(https://unsplash.it/800/600?image=82);
+}
+
+.image--river {
+    background-image: url(https://unsplash.it/800/600?image=11);
+}
+
+.image--record {
+    background-image: url(https://unsplash.it/800/600?image=39);
+}
+
+.image--fence {
+    background-image: url(https://unsplash.it/800/600?image=59);
+}
+@media (max-width: 60rem) {
+    .column {
+        flex-basis: 32%;
+    }
+   
+    
+    .card {
+       
+        min-width: 48%;
+    }
+   
+}    
+@media (max-width: 53rem) {
+    .column {
+        flex-basis: 100%;
+        height: auto;
+    }
+    .card{
+        height: 80vh;
+    }
+    .column:nth-child(2){
+        order:-1;
+    }
+    .card::before{
+        height: 80%;
+    }
+    .card__image{
+        height: 80%;
+    }
+}    
+
+.soon{
+    visibility: hidden;
+    position: absolute;
+    color: #fff;
+    top: 2%;
+    right: 2%;
+    font-size: 1.5rem;
+    z-index: 4;
+}
+.card:hover .soon{
+    visibility: visible;
+}
