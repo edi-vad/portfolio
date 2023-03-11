@@ -230,7 +230,7 @@
         function autoSlide() {
           if (slider.scrollLeft - (slider.scrollWidth - slider.clientWidth) > -1 || slider.scrollLeft <= 0) return;
           positionDiff = Math.abs(positionDiff);
-          let slideWidth = isMultislide ? slider.clientWidth : sliderItem.clientWidth;
+          let slideWidth = isMultiSlide ? slider.clientWidth : sliderItem.clientWidth;
           let valDifference = slideWidth - positionDiff;
           if (slider.scrollLeft > prevScrollLeft) {
             // return slider.scrollLeft += positionDiff > slideWidth / 5 ? valDifference : -positionDiff;
