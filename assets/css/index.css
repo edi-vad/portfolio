@@ -1,0 +1,39 @@
+.container{
+    background-color: #fff;
+    height: auto;
+}
+.image__container{
+    background: transparent;
+    height: 50%;
+}
+
+#background-image{
+    min-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -999;
+}
+
+.text__container{
+    background-color: #fff;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.5em;
+}
+.image__container img{
+    min-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -999;
+}

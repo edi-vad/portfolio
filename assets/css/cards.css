@@ -61,9 +61,12 @@
 
 .card__content{
     align-self: flex-end;
-    
+    text-align: center;
     width: 100%;
-    padding: 5px 15px;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     color: var(--main-color);
     z-index: 3;
@@ -77,7 +80,13 @@
 
 
 .card--longer{
-    height: 80vh;
+    height: 95vh;
+}
+.card--longer .card__image{
+    height: 80%;
+}
+.card--longer .card__content{
+    height: 20%;
 }
 .image--flowers {
     background-image: url(https://unsplash.it/800/600?image=82);
