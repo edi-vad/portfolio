@@ -28,6 +28,7 @@
     margin: 15px 0;
     display: flex;
     justify-content: center;
+    
 }
 .main__menu li {
     display: inline-block;
@@ -38,7 +39,7 @@
     border: none;
     position: relative;
     
-    color: var(--menu-color);
+    color: var(--main-color);
     padding: 12px;
     display: block;
     transition: all 1s;
@@ -54,14 +55,14 @@
 .main__menu a::after{
     top: 0px;
     left: 0px;
-    border-top: 3px solid var(--menu-color);
-    border-left: 3px solid var(--menu-color);
+    border-top: 3px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
 }
 .main__menu a::before{
     bottom: 0px;
     right: 0px;
-    border-bottom: 3px solid var(--menu-color);
-    border-right: 3px solid var(--menu-color);
+    border-bottom: 3px solid var(--main-color);
+    border-right: 3px solid var(--main-color);
 }
 .main__menu a:hover{
     border-top-right-radius:0px;

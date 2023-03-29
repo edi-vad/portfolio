@@ -1,20 +1,22 @@
 form{
-    padding-top: 10px;
+    padding: 10px 0;
+    margin: 0;
+    background: var(--bg);
 }
 .form__container{
     
     width: 100%;
-
-   
     background-color: #fff;
     max-width: 1200px;
     margin: 10px auto;
+    margin-bottom: 0px;
     padding: 20px;
-    color: var(--bg);
+    color: var(--menu-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
 .form__container h1{
     padding-left: 10px;
+
 }
 .flex__container{
     display: flex;
@@ -27,36 +29,47 @@ form{
     width: 33%;
     padding: 10px;
     margin-bottom: 10px;
+    
 }
 .form__group input{
     padding: 5px 10px;
     border-radius: 5px;
     border: solid 1px #d5d5d5;
-    
+    outline: none;
+    transition: all .2s ease-in;
+}
+.form__group input:focus{
+    border: solid 1px #000;
 }
 .form__group textarea{
     padding: 5 10px;
     border-radius: 5px;
     border: solid 1px #d5d5d5;
+    outline: none;
+    transition: all .2s ease-in;
+}
+.form__group textarea:focus{
+    border: solid 1px #000;
 }
 .form__group button{
     padding: 10px;
     border-radius: 5px;
-    background-color: rgba(69, 123, 157, .8);
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
     cursor: pointer;
-    border: 1px solid rgba(69, 123, 157, .8);
+    border: 1px solid rgba(0, 0, 0, .8);
     transition: all .2s ease-in;
 }
 .form__group button:hover{
-    background-color: rgba(69, 123, 157, 1);
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
 }
 .form__info{
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     flex-direction: row;
-    color:  #457B9D;
+    color:  #000;
 }
 .form__info label{
     padding-left: 10px;

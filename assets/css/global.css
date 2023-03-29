@@ -4,13 +4,13 @@
 
 
 :root {
-    --menu-bg: #457b9d;
-    --menu-color: #fff;
-    --menu-color-hover: #fff;
-    --menu-color-hover-small: #457b9d;
+    --menu-bg: #fff;
+    --menu-color: #000;
+    --menu-color-hover: #000;
+    --menu-color-hover-small: #fff;
     --main-color:#fff;
-    --bg: #457b9d;
-    --card-color:#457b9d;
+    --bg: #fff;
+    --card-color:#ffffff;
 }
 html{
   scroll-behavior: smooth;
@@ -44,4 +44,7 @@ body{
   width: 100%;
   height: 100%;
   background: var(--bg);   
+}
+.auto{
+  height: auto;
 }

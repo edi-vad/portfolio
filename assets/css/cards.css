@@ -1,19 +1,21 @@
 
 .container__flex{
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    margin: 0 auto;
     padding: 20px;
     padding-top: 70px;
-    height: auto;
     background-color: var(--main-color);
+
+    
+
 }
 .column {
     display: flex;
     flex-basis: 32%;
-    height: 140vh;
+    height: 85vh;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -24,7 +26,7 @@
     height: 33%;
     border-radius: 2%;
     overflow: hidden;
-    background-color:  #457B9D;
+    background-color:  #fff;
     display: flex;
     position: relative;
     
@@ -55,10 +57,12 @@
     transition: all .2s ease-out;
 }
 .card:hover::before{
-    background-color:  rgba(69, 123, 157, .5);
+    background-color:  rgba(0, 0, 0, 0.5);
     height: 100%;
 }
-
+.card:hover .card__content{
+    color: #fff;
+}
 .card__content{
     align-self: flex-end;
     text-align: center;
@@ -70,17 +74,21 @@
     position: relative;
     color: var(--main-color);
     z-index: 3;
-    background-color:#457B9D;
+    background-color:#fff;
+    color: #000;
     font-size: .8rem;
 }
+.card__content h1{
+    font-weight: 500;
+}
 .card:hover .card__content{
-    background-color:  rgba(69, 123, 157, 0);
+    background-color:  rgba(0, 0, 0, 0);
 }
 
 
 
 .card--longer{
-    height: 95vh;
+    height: 60vh;
 }
 .card--longer .card__image{
     height: 85%;
@@ -103,6 +111,18 @@
 .image--fence {
     background-image: url(https://unsplash.it/800/600?image=59);
 }
+.soon{
+    visibility: hidden;
+    position: absolute;
+    color: #fff;
+    top: 2%;
+    right: 2%;
+    font-size: 1.5rem;
+    z-index: 4;
+}
+.card:hover .soon{
+    visibility: visible;
+}
 @media (max-width: 60rem) {
     .column {
         flex-basis: 32%;
@@ -116,7 +136,7 @@
 
    
 }    
-@media (max-width: 53rem) {
+@media (max-width: 48rem) {
     .column {
         flex-basis: 100%;
         height: auto;
@@ -134,19 +154,21 @@
         height: 15%;
     }
     .card__image{
-        height: 85%;
+        height: 100%;
+    }
+    .card--longer .card__image{
+        height: 100%;
+    }
+    .card::before{
+        background-color:  rgba(0, 0, 0, 0.5);
+        height: 100%;
+    }
+    .card__content{
+        background-color:  rgba(0, 0, 0, 0);
+        color: #fff;
+    }
+    .soon{
+        visibility: visible;
     }
 }    
 
-.soon{
-    visibility: hidden;
-    position: absolute;
-    color: #fff;
-    top: 2%;
-    right: 2%;
-    font-size: 1.5rem;
-    z-index: 4;
-}
-.card:hover .soon{
-    visibility: visible;
-}

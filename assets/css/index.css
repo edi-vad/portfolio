@@ -24,7 +24,12 @@
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 28vh;
+    height: auto;
     line-height: 1.5em;
+}
+.text__container li{
+    list-style-type: disc;
 }
 .image__container img{
     min-width: 100%;
@@ -37,3 +42,9 @@
     top: 0;
     z-index: -999;
 }
+@media screen and (max-width: 768px) {
+    .text__container{
+        padding: 1rem;
+    }
+}
+    
