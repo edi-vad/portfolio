@@ -96,21 +96,32 @@
 .card--longer .card__content{
     height: 15%;
 }
-.image--flowers {
-    background-image: url(https://unsplash.it/800/600?image=82);
+.image--drone{
+    background-image: url('../img/Rilievi\ con\ drone.png');
+}
+.image--mano{
+
+}
+.image--formazione{
+    background-image: url('../img/Corsi\ di\ formazione.jpg');
+}
+.image--me{
+
+}
+.image--presentazione{
+    background-image: url('../img/presentazione.png');
+}
+.image--coord{
+    background-image: url('../img/coordinatore\ sicurezza.jpg')
+}
+.image--termografia{
+    background-image: url('../img/termografia\ da\ drone.jpg')
+}   
+.image--riprese{
+    background-image: url('../img/Riprese video.jpg');
 }
 
-.image--river {
-    background-image: url(https://unsplash.it/800/600?image=11);
-}
 
-.image--record {
-    background-image: url(https://unsplash.it/800/600?image=39);
-}
-
-.image--fence {
-    background-image: url(https://unsplash.it/800/600?image=59);
-}
 .soon{
     visibility: hidden;
     position: absolute;
